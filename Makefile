@@ -16,4 +16,4 @@ report/report.html:
 		rscript -e 'library(rmarkdown); render("report/report.Rmd","html_document")'
 
 clean:
-		rm -rf report/report.html
+		rm -r report/report.html

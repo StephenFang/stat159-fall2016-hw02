@@ -11,7 +11,7 @@ library(xtable)
 In this report we reproduce the main results displayed in section 3.1 Simple Linear Regression (chapter 3) of the book An Introduction to Statistical Learning. We are given a data set of multiple media advertising and the sales unit of a certain product and we are trying to find if possible linear relationship between the variables.
 
 ##Introduction
-In this project, we are acting as a statistician trying to find out if there is a relationship between TV advertising and the sales performance of our product. We are also trying to interpret the results after running data analysis and generate guide for future advertising strategies.
+In this project, we are acting as a statistician trying to find out if there is a relationship between TV advertising and the sales performance of our product. We are also trying to interpret the results after running data analysis and generate guide for future advertising strategies..
 
 ##Data
 The data set we are using in this report is `Advertising.csv`. This data set contains `Sales` as in thousands of untis for a certain product. This data set also contains the budget (in thousands of dollars) for advertising on TV, radio and newspaper. For this report, we are looking at the relationship between Sales and TV only.
