@@ -1,5 +1,7 @@
 #Description
 
+Mingtao Fang
+
 
 This report aims to apply the computational toolkit (plus R) to reproduce a simple regression analysis. the idea is to reproduce the analysis from Section 3.1 (pages 59 to 71), of Chapter 3. Linear Regression, from the book "An Introduction to Statistical Learning" (by James et al):
 
@@ -39,3 +41,6 @@ stat159-fall2016-hw02/
         report.Rmd
         report.pdf
 ```
+
+
+
