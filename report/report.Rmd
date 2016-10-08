@@ -6,8 +6,6 @@ output:
   html_document:
     fig_height: 3
     fig_width: 5
----
-<!-- Don't edit in between this line and the one below -->
 ```{r include=FALSE}
 # Don't delete this chunk if you are using the DataComputing package
 library(DataComputing)
@@ -46,7 +44,7 @@ To estimate the coefficients β0 and β1 we fit a regression model via the least
 
 ##Results
 
-```{r, echo=FALSE}
+```{r results='asis', echo=FALSE}
 load(file = "../data/regression.RData")
 s <- summary(regression_object)
 table <- xtable(s, caption = "Table 1")
@@ -65,7 +63,7 @@ The interception coefficient is 0.00475. According to this models, it explains h
 
 To test the null hypothesis, which states that there is no relationship between advertising budget and product sales, we need to check the p-value. In this case, p-value for both  <0.0001, which incates that it is extremely unlikely to observe no relationship between advertising budget and product sales. Therefore, null hypothesis is rejected, and we should be able to declare a relationship between TV advertising budget and product sales.   
 
-```{r, echo=FALSE}
+```{r results='asis', echo=FALSE}
 table2 <- data.frame(c("Residual standard error", "R Square", "F-Statistics"), c(s$sigma, s$r.squared, s$fstatistic[1]))
 colnames(table2) <- c("Quantity", "Value")
 table2 <- xtable(table2, caption = "Table2")
