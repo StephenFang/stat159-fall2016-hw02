@@ -10,16 +10,16 @@ regression_object = lm(sales_data ~ tv_data)
 regression_object
 s = summary(regression_object)
 s
-save(s, file="../data/regression.RData")
+save(regression_object, file="../data/regression.RData")
 
 
 # Output Scatterplot of TV against Sales for png and pdf
 png(filename='../images/scatterplot-tv-sales.png')
-plot(tv_data, sales_data, col = "blue", main = "Sales Against Adversting For TV", xlab = "Adversting", ylab = "Sales")
+plot(tv_data, sales_data, col = "blue", main = "Sales Against Adversting", xlab = "TV Adversting (in thousands of dollars)", ylab = "Sales (in thousands of units)")
 abline(lm(sales_data ~ tv_data))
 dev.off()
 
 pdf(file='../images/scatterplot-tv-sales.pdf')
-plot(tv_data, sales_data, col = "blue", main = "Sales Against Adversting For TV", xlab = "Adversting", ylab = "Sales")
+plot(tv_data, sales_data, col = "blue", main = "Sales Against TV Adversting", xlab = "TV Adversting (in thousands of dollars)", ylab = "Sales (in thousands of units)")
 abline(lm(sales_data ~ tv_data))
 dev.off()
