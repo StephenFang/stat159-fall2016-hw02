@@ -1,23 +1,19 @@
-.PHONY all data clean
+.PHONY: all data clean
 
 
-all: clean report/report.pdf report/report.html data/eda-output.txt data/regression.RData 
-
-
+all: clean report/report.html data/eda-output.txt data/regression.RData 
 
 data:
-	wget -O data/Advertising.csv "http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv"
+		wget -O data/Advertising.csv "http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv"
 
 data/eda-output.txt:
-	rscript code/eda-script.R
+		rscript code/eda-script.R
 
 data/regression.RData:
-	rscript code/regression-script.R
+		rscript code/regression-script.R
 
-report/report.pdf:
-	rscript -e 'library(rmarkdown); render("report/report.Rmd","pdf_document")'
-	rscript -e 'library(rmarkdown); render("report/report.Rmd","html_document")'
+report/report.html:
+		rscript -e 'library(rmarkdown); render("report/report.Rmd","html_document")'
 
 clean:
-	rm -rf report/report.html
-	rm -rf report/report.pdf
+		rm -rf report/report.html
